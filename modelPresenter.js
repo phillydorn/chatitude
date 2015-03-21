@@ -5,10 +5,9 @@
 
 	Messages.Presenter = function (element) {
 	  var $view = $(element)
-      var that = this;
+
 	  $view.on('click', '.update', function(e) {
          MessageList.fetch();
-         // that.render();
 	  })
 
 	  $view.on('click', '.submit', function(e) {
@@ -16,7 +15,7 @@
         var post = $('input.enterPost').val();
         console.log(post);
         MessageList.post(post);
-        // MessageLixst.signin(name, password)
+   
 	  })
 
 	  $view.on('click', '.signUp', function(e) {
@@ -56,7 +55,8 @@
 	}
 	Messages.mount = function (element) {
 		var presenter = new Messages.Presenter(element);
-		presenter.render();
+		MessageList.fetch();
+		setInterval(MessageList.fetch, 10000);
 	}
 
 
