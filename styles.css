@@ -58,7 +58,9 @@ form input[type=text] {
     font-size: 12px;
     padding: 5px;
 }
-
+.update {
+    display: block;
+}
 .message {
     padding: 5px;
     margin-bottom: 5px;

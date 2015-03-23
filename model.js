@@ -40,7 +40,7 @@
 			  sessionStorage.setItem('apiToken', token)
 		 },
 		error: function () {
-			console.error('signup failed')
+			console.error('signin failed')
 		}
 
       })
@@ -70,8 +70,8 @@
     	success: function (data) {
     	  MessageList.spamFilter(data);
 		  MessageList.store(data);
-		  // console.log(data);
-		  // console.log (messageStorage);
+		  console.log(data);
+		  console.log (messageStorage);
 		 },
 		error: function () {
 			console.error('fetch failed');

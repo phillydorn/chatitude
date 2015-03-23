@@ -13,27 +13,17 @@
     <!-- your scripts -->
      <!--script src="env/config.js"></script-->
     <script src="model.js"></script>
-    <script src="modelPresenter.js"></script>
+    <script src="Page.js"></script>
+     <script src="messagesModel.js"></script>
+      <script src="userForm.js"></script>
   </head>
   <body>
-    <div id="main">
-      <h1>Chatitude</h1>
-        <button class="update">Update Posts</button>
-        <form>
-           <button class="submit">Submit Post</button>
-           <input type = "text" class = "enterPost"/>
-           </form>
-         <button class="signUp">Sign Up</button>
-         <button class="signIn">Sign In</button>
-         <div id='allMessages'>
-           <h2>Messages:</h2>
-         </div>
-    </div>
+    <div id="main"></div>
 
     <script type="text/javascript"> 
     var elem = $("#main");
 
-    Messages.mount(elem)
+    Page.mount(elem)
 
     </script>
   </body>
